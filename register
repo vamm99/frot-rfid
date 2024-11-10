@@ -1,0 +1,22 @@
+<script setup>
+import RegisterForm from '@/components/RegisterForm.vue';
+</script>
+<template>
+  <div class="container">
+    <div>
+      <h1>hola mundo </h1>
+    </div>
+
+    <RegisterForm />
+  </div>
+</template>
+<style>
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+</style>
