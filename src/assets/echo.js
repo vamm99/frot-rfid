@@ -6,7 +6,7 @@ window.Pusher = Pusher;
 // Configuración de Pusher y Echo
 const echo = new Echo({
     broadcaster: 'reverb',
-    key: '7vydf4vqdurpvhszwttg', // Tu clave de Pusher (puedes obtenerla de tu cuenta de Pusher)
+    key: '9ri8262cyqzlgdy3jny5', // Tu clave de Pusher (puedes obtenerla de tu cuenta de Pusher)
     wsHost: "localhost",
     wsPort: 8080,
     forceTLS: false,

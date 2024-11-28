@@ -1,13 +1,7 @@
 <template>
-  <Navbar />
-  <main>
-    <RouterView />
-  </main>
+  <RouterView />
 </template>
 
 <script setup>
-import { RouterView } from 'vue-router';
-import Navbar from './components/Template.vue';
+import { RouterView } from "vue-router";
 </script>
-
-<style scoped></style>

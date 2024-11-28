@@ -1,0 +1,7 @@
+1. Poner a escuchar a la Api en todas las direcciones 
+    php artisan serve --host=0.0.0.0 --port=8000 
+    Esto con la finalidad que toda dirección que mande una petición por el puerto 8000 la pueda escuchar la Api. 
+
+2. Buscar la Ip que le otorga la red a nuestro ordenador y colocarla en la URL del ESP32.
+     Ejemplo de Ip: 192.168.145.54 
+     http://192.168.145.54:8000/api/users/tag 3.
