@@ -5,12 +5,11 @@ import axios from "./apiCliente"; // Importamos nuestro cliente Axios
 window.Pusher = Pusher;
 // Configuración de Pusher y Echo
 const echo = new Echo({
-  broadcaster: "pusher",
-  key: "9ri8262cyqzlgdy3jny5",
+  broadcaster: "reverb",
+  key: "9ri8262cyqzlgdy3jny5", // Tu clave de Pusher (puedes obtenerla de tu cuenta de Pusher)
   wsHost: "apiapp.mooo.com",
-  wsPort: 8080, // Cambiar si el puerto 8080 no está permitido en producción
-  wssPort: 443, // Puerto estándar para WebSockets seguros
-  forceTLS: true,
+  wsPort: 8080,
+  forceTLS: false,
   encrypted: true,
   disableStats: true,
   authorizer: (channel, options) => {
