@@ -9,7 +9,7 @@ const echo = new Echo({
   key: "9ri8262cyqzlgdy3jny5", // Tu clave de Pusher (puedes obtenerla de tu cuenta de Pusher)
   wsHost: "apiapp.mooo.com",
   wsPort: 8080,
-  forceTLS: false,
+  forceTLS: true,
   encrypted: true,
   disableStats: true,
   authorizer: (channel, options) => {
