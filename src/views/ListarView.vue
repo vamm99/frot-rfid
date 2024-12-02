@@ -232,8 +232,10 @@ const fetchUsers = async (url) => {
 <script setup>
 import { onMounted, ref } from "vue";
 import { useClientStore } from "../stores/clientStore";
+import useAuthStore from "@/stores/auth";
 
 const client = useClientStore();
+const { logout } = useAuthStore();
 
 const mesFiltro = ref(""); // Mes seleccionado (número 1-12)
 const anioFiltro = ref(""); // Año seleccionado
