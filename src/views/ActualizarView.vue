@@ -219,7 +219,7 @@
 <script setup>
 import { ref } from "vue";
 import { useClientStore } from "../stores/clientStore"; // Importar el store
-import { onMounted } from "vue";
+import { onMounted, watch } from "vue";
 import echo from "../assets/echo"; // Importar Echo
 import { RouterLink } from "vue-router";
 import useAuthStore from "@/stores/auth";
@@ -260,6 +260,27 @@ onMounted(() => {
     clientStore.rfidReadUpdate = e.uid;
   });
 });
+
+watch(
+  () => client.messageApiUsuarioEncontrado,
+  (newMessage) => {
+    if (newMessage) {
+      setTimeout(() => {
+        client.messageApiUsuarioEncontrado = null;
+      }, 3000);
+    }
+  }
+);
+watch(
+  () => client.messageApiUpdateUser,
+  (newMessage) => {
+    if (newMessage) {
+      setTimeout(() => {
+        client.messageApiUpdateUser = null;
+      }, 3000);
+    }
+  }
+);
 // Función para actualizar los datos del usuario
 const updateUser = async () => {
   try {

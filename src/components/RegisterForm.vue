@@ -134,7 +134,7 @@
 
 <script setup>
 import { useClientStore } from "../stores/clientStore"; // Importar el store de Pinia
-import { onMounted } from "vue";
+import { onMounted, watch } from "vue";
 import echo from "../assets/echo"; // Importar Echo
 
 const client = useClientStore();
@@ -149,7 +149,7 @@ watch(
   (newMessage) => {
     if (newMessage) {
       setTimeout(() => {
-        client.message = null;
+        client.messageApi = null;
       }, 3000);
     }
   }
