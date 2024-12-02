@@ -262,21 +262,21 @@ onMounted(() => {
 });
 
 watch(
-  () => client.messageApiUsuarioEncontrado,
+  () => clientStore.messageApiUsuarioEncontrado,
   (newMessage) => {
     if (newMessage) {
       setTimeout(() => {
-        client.messageApiUsuarioEncontrado = null;
+        clientStore.messageApiUsuarioEncontrado = null;
       }, 3000);
     }
   }
 );
 watch(
-  () => client.messageApiUpdateUser,
+  () => clientStore.messageApiUpdateUser,
   (newMessage) => {
     if (newMessage) {
       setTimeout(() => {
-        client.messageApiUpdateUser = null;
+        clientStore.messageApiUpdateUser = null;
       }, 3000);
     }
   }
