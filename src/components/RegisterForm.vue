@@ -144,6 +144,17 @@ onMounted(() => {
   });
 });
 
+watch(
+  () => client.messageApi,
+  (newMessage) => {
+    if (newMessage) {
+      setTimeout(() => {
+        client.message = null;
+      }, 3000);
+    }
+  }
+);
+
 const submitForm = async () => {
   try {
     await client.registerClient(); // Llamamos a la acción que registra el cliente
