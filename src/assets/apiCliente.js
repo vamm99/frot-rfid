@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 const axios = Axios.create({
-  baseURL: "https://apiapp.mooo.com/api/users/",
+  baseURL: "https://test-api.hibeauty.com.co/api/users/",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",

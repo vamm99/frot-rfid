@@ -7,7 +7,7 @@ window.Pusher = Pusher;
 const echo = new Echo({
   broadcaster: "reverb",
   key: "9ri8262cyqzlgdy3jny5", // Tu clave de Pusher (puedes obtenerla de tu cuenta de Pusher)
-  wsHost: "apiapp.mooo.com",
+  wsHost: "test-api.hibeauty.com.co",
   wsPort: 8080,
   forceTLS: true,
   encrypted: true,
