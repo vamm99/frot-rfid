@@ -153,7 +153,7 @@ h1 {
 </style>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { useClientStore } from "../stores/clientStore"; // Importar el store de Pinia
 import echo from "../assets/echo"; // Importar Echo
 import useAuthStore from "@/stores/auth";
@@ -199,6 +199,29 @@ onMounted(() => {
     }
   });
 });
+
+// Observa los cambios en las propiedades de las alertas y las cierra automáticamente después de 3 segundos
+watch(
+  () => client.message,
+  (newMessage) => {
+    if (newMessage) {
+      setTimeout(() => {
+        client.message = null;
+      }, 3000);
+    }
+  }
+);
+
+watch(
+  () => client.messageApiRecargarSaldo,
+  (newMessage) => {
+    if (newMessage) {
+      setTimeout(() => {
+        client.messageApiRecargarSaldo = null;
+      }, 3000);
+    }
+  }
+);
 
 const submitForm = async () => {
   try {
